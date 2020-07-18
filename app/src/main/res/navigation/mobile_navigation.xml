@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/list_terms_fragment">
+
+    <fragment
+        android:id="@+id/list_terms_fragment"
+        android:name="com.example.tdm2_td02_exo1_.ui.listTerms.ListTermsFragment"
+        tools:layout="@layout/list_terms_fragment">
+        <action
+            android:id="@+id/list_to_dictionary_action"
+            app:destination="@+id/term_dictionary_fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/term_dictionary_fragment"
+        android:name="com.example.tdm2_td02_exo1_.ui.termDictionary.TermDictionaryFragment"
+        tools:layout="@layout/term_dictionary_fragment" >
+        <action
+            android:id="@+id/dictionaty_to_video_action"
+            app:destination="@+id/play_video_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/play_video_fragment"
+        android:name="com.example.tdm2_td02_exo1_.ui.playVideo.PlayVideoFragment"
+        tools:layout="@layout/play_video_fragment" />
+
+
+</navigation>
